@@ -7,7 +7,15 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "storybook:build": "vue-cli-service storybook:build -c storybook/",
-    "storybook:serve": "vue-cli-service storybook:serve -p 6006 -c storybook/"
+    "storybook:serve": "vue-cli-service storybook:serve -p 6006 -c storybook/",
+    "bundle": "vue-cli-service build --target lib --name wfp-vue-shared-components ./bundle.js",
+    "prepare": "npm run bundle"
+  },
+  "main": "./dist/wfp-vue-shared-components.umd.min.js",
+  "files": ["dist/**/*"],
+  "repository": {
+    "type": "git",
+    "url": "git@git.hermescloud.co.uk:workforce-portal/wfp-vue-shared-components.git"
   },
   "dependencies": {
     "core-js": "^3.4.3",

@@ -25,8 +25,9 @@ npm run test
 npm run lint
 ```
 
-Other 
-- [Storybook](docs/STORYBOOK.md)
+## Other
+- [Preview existing component with Storybook](docs/STORYBOOK.md)
+- [Bundle files ready for distribution](docs/BUNDLE.md)
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
