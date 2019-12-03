@@ -16,9 +16,9 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 button {
-  border: 1px solid #eee;
+  border: 2px solid $color;
   border-radius: 3px;
   background-color: #ffffff;
   cursor: pointer;

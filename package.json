@@ -12,7 +12,9 @@
     "prepare": "npm run bundle"
   },
   "main": "./dist/wfp-vue-shared-components.umd.min.js",
-  "files": ["dist/**/*"],
+  "files": [
+    "dist/**/*"
+  ],
   "repository": {
     "type": "git",
     "url": "git@git.hermescloud.co.uk:workforce-portal/wfp-vue-shared-components.git"
@@ -35,7 +37,9 @@
     "eslint-loader": "^3.0.2",
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-vue": "^5.2.3",
+    "node-sass": "^4.13.0",
     "prettier": "^1.19.1",
+    "sass-loader": "^8.0.0",
     "vue-cli-plugin-storybook": "^0.6.1",
     "vue-template-compiler": "^2.6.10"
   },

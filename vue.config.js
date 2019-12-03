@@ -4,6 +4,16 @@ module.exports = {
      * Inline css into bundled js in dist/
      */
     extract: false,
+    /**
+     * Expose scss in all .vue files
+     */
+    loaderOptions: {
+      sass: {
+        prependData: `
+          @import "@/assets/scss/main.scss";
+        `
+      }
+    }
   },
   /**
    * Autofix eslint on save
