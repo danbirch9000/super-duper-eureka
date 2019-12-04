@@ -10,24 +10,50 @@ npm install
 npm run serve
 ```
 
-### Compiles and minifies for production
+### Compiles and minifies for vue app for production
 ```
 npm run build
 ```
 
-### Run your tests
+### Lints files
+```
+npm run lint
+```
+A `husky` & `lint-staged` run pre commit hook script that runs lint. The commit will fail if errors are found. To skip the hook run `git commit -n -m "your commit message"`
+
+### Lints and fixes files
+```
+npm run lint:fix
+```
+
+### Compiles and bundles assets for production
+```
+npm run bundle
+```
+[See here for more detail](docs/BUNDLE.md)
+
+### Automated script run on install
+```
+npm run prepare
+```
+[See here for more detail](docs/BUNDLE.md)
+
+### Run storybook
+```
+npm run storybook:serve
+```
+[See here for more detail](docs/STORYBOOK.md)
+
+### Run all tests
 ```
 npm run test
 ```
 
-### Lints and fixes files
+### Run unit tests
 ```
-npm run lint
+npm run test:unit
 ```
 
-## Other
-- [Preview existing component with Storybook](docs/STORYBOOK.md)
-- [Bundle files ready for distribution](docs/BUNDLE.md)
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
