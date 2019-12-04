@@ -38,6 +38,8 @@
     "eslint-loader": "^3.0.2",
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-vue": "^5.2.3",
+    "husky": "^3.1.0",
+    "lint-staged": "^9.5.0",
     "node-sass": "^4.13.0",
     "prettier": "^1.19.1",
     "sass-loader": "^8.0.0",
@@ -51,5 +53,15 @@
   "repository": {
     "type": "git",
     "url": "git@git.hermescloud.co.uk:workforce-portal/wfp-vue-shared-components.git"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,vue}": [
+      "npm run lint"
+    ]
   }
 }
