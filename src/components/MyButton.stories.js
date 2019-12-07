@@ -5,10 +5,10 @@ import { linkTo } from "@storybook/addon-links";
 
 import MyButton from "../components/MyButton.vue";
 
-storiesOf("Button", module)
+storiesOf("BaseButton", module)
   .add("with text", () => ({
     components: { MyButton },
-    template: '<my-button @click="action">Hello Button</my-button>',
+    template: '<my-button @click="action">Hello BaseButton</my-button>',
     methods: { action: action("clicked") }
   }))
   .add("with JSX", () => ({
@@ -16,7 +16,7 @@ storiesOf("Button", module)
     render() {
       return <my-button onClick={this.action}>With JSX</my-button>;
     },
-    methods: { action: linkTo("Button", "with some emoji") }
+    methods: { action: linkTo("BaseButton", "with some emoji") }
   }))
   .add("with some emoji", () => ({
     components: { MyButton },

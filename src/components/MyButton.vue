@@ -18,7 +18,7 @@ export default {
 
 <style lang="scss">
 button {
-  border: 2px solid $color;
+  border: 2px solid red;
   border-radius: 3px;
   background-color: #ffffff;
   cursor: pointer;

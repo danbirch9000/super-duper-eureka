@@ -12,7 +12,18 @@ module.exports = {
     "plugin:prettier/recommended"
   ],
 
-  rules: {},
+  rules: {
+    "vue/component-name-in-template-casing": [
+      "error",
+      "PascalCase",
+      {
+        registeredComponentsOnly: true,
+        ignores: []
+      }
+    ],
+    "vue/no-v-html": "off",
+    "no-console": "off"
+  },
 
   parserOptions: {
     parser: "babel-eslint"
