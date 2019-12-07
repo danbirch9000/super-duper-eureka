@@ -1,0 +1,71 @@
+/**
+ * Responsive breakpoints mixin
+ */
+
+@mixin breakpoint($breakpoint) {
+  $result: 0px;
+  @if $breakpoint == "xxs" {
+    $result: $breakpoint-xxs;
+  } @else if $breakpoint == "xs" {
+    $result: $breakpoint-xs;
+  } @else if $breakpoint == "sm" {
+    $result: $breakpoint-sm;
+  } @else if $breakpoint == "md" {
+    $result: $breakpoint-md;
+  } @else if $breakpoint == "lg" {
+    $result: $breakpoint-lg;
+  }
+  @media (min-width: $result) {
+    @content;
+  }
+}
+
+/**
+ * Space function
+ */
+
+@function space($number) {
+  $result: 0px;
+  @if $number == 1 {
+    $result: 4px;
+  } @else if $number == 2 {
+    $result: 8px;
+  } @else if $number == 3 {
+    $result: 12px;
+  } @else if $number == 4 {
+    $result: 16px;
+  } @else if $number == 5 {
+    $result: 20px;
+  } @else if $number == 6 {
+    $result: 24px;
+  } @else if $number == 7 {
+    $result: 28px;
+  } @else if $number == 8 {
+    $result: 32px;
+  }
+  @return $result;
+}
+
+/**
+ * Skins
+ */
+
+@mixin skin-card() {
+  box-shadow: $skin-box-shadow;
+  background: $color-brand-white;
+  border-radius: $border-radius-sm;
+}
+
+/**
+ * Helpers
+ */
+
+@mixin list-no-style() {
+  padding: 0;
+  margin: 0;
+  & li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+}

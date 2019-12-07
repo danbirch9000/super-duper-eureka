@@ -1,0 +1,41 @@
+/**
+ * Brand colours
+ */
+$color-brand-pacific: #0091cd;
+$color-brand-paradiso: #1d9073;
+$color-brand-sandy: #f4764c;
+$color-brand-demask: #cc1a1a;
+$color-brand-fiord: #1d3355;
+$color-brand-white: #ffffff;
+$color-brand-cornflower: #8bd5e6;
+$color-brand-scampi: #554696;
+$color-brand-goldenrod: #fdd372;
+$color-brand-deco: #bbdb98;
+$color-brand-blush: #b22452;
+$color-brand-eggplant: #73465b;
+
+$color-brand-blue: $color-brand-pacific;
+$color-brand-light-blue: $color-brand-cornflower;
+$color-brand-dark-blue: $color-brand-fiord;
+
+/**
+  * Monoschromatic colors
+  */
+$color-mono-1: #ffffff;
+$color-mono-2: #fbfbfb;
+$color-mono-3: #f4f4f4;
+$color-mono-4: #e8e8e8;
+$color-mono-5: #d6d6d5;
+$color-mono-6: #bdbdbd;
+$color-mono-7: #9b9b98;
+$color-mono-8: #70706f;
+$color-mono-9: #3e3e3d;
+$color-mono-10: #000;
+
+/**
+  * Feedback
+  */
+$color-ui-info: $color-brand-pacific;
+$color-ui-success: $color-brand-paradiso;
+$color-ui-warning: $color-brand-sandy;
+$color-ui-error: $color-brand-demask;
