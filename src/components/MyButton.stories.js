@@ -5,7 +5,7 @@ import { linkTo } from "@storybook/addon-links";
 
 import MyButton from "../components/MyButton.vue";
 
-storiesOf("BaseButton", module)
+storiesOf("MyButton", module)
   .add("with text", () => ({
     components: { MyButton },
     template: '<my-button @click="action">Hello BaseButton</my-button>',

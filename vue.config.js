@@ -28,6 +28,16 @@ module.exports = {
       .options({
         minimize: true
       });
+
+    /**
+     * Use html loader to import markdown files storybook docs
+     */
+    config.module
+      .rule("md")
+      .test(/\.md/)
+      .use("html-loader")
+      .loader("html-loader")
+      .end();
     /**
      * Autofix eslint on save
      */

@@ -30,24 +30,24 @@ export default {
   line-height: 16px;
 }
 .tag-default {
-  background: $color-mono-7;
+  background: $color-default;
 }
 .tag-primary {
-  background: $color-brand-dark-blue;
+  background: $color-primary;
 }
 .tag-secondary {
-  background: $color-brand-blue;
+  background: $color-secondary;
 }
 .tag-info {
-  background: $color-brand-blue;
+  background: $color-info;
 }
 .tag-success {
-  background: $color-ui-success;
+  background: $color-success;
 }
 .tag-warning {
-  background: $color-ui-warning;
+  background: $color-warning;
 }
 .tag-error {
-  background: $color-ui-error;
+  background: $color-error;
 }
 </style>

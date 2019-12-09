@@ -46,19 +46,19 @@ export default {
   position: relative;
 }
 .alert-message-default {
-  background: $color-mono-7;
+  background: $color-default;
 }
 .alert-message-info {
-  background: $color-brand-blue;
+  background: $color-info;
 }
 .alert-message-success {
-  background: $color-ui-success;
+  background: $color-success;
 }
 .alert-message-warning {
-  background: $color-ui-warning;
+  background: $color-warning;
 }
 .alert-message-error {
-  background: $color-ui-error;
+  background: $color-error;
 }
 
 .icon {

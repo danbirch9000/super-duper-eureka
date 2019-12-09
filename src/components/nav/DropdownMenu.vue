@@ -21,6 +21,7 @@ export default {
   },
   computed: {
     on() {
+      console.log("--");
       return {
         click: this.handleClick
       };

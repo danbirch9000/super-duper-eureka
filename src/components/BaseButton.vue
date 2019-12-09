@@ -19,7 +19,14 @@ export default {
           "info",
           "success",
           "warning",
-          "error"
+          "error",
+          "default-outline",
+          "primary-outline",
+          "secondary-outline",
+          "info-outline",
+          "success-outline",
+          "warning-outline",
+          "error-outline"
         ].indexOf(val) !== -1
     },
     size: {
@@ -65,45 +72,79 @@ export default {
   cursor: pointer;
   color: white;
   line-height: 16px;
+  border: 3px solid rgba($color-primary, 0);
   &:hover,
   &:focus {
-    box-shadow: inset 3px 0 0 $color-brand-dark-blue,
-      inset -3px 0 0 $color-brand-dark-blue,
-      inset 0 -3px 0 $color-brand-dark-blue,
-      inset 0 3px 0 $color-brand-dark-blue;
+    border: 3px solid rgba($color-primary, 1);
   }
 }
 .btn-disabled {
   background: $color-mono-7;
   cursor: not-allowed;
+  &:hover,
+  &:focus {
+    border: 3px solid rgba($color-primary, 0);
+  }
 }
+
 .btn-default {
   background: none;
   color: inherit;
   border-radius: 0;
   &:hover,
   &:focus {
-    box-shadow: none;
+    border: 3px solid rgba($color-primary, 0);
   }
 }
 .btn-primary {
-  background: $color-brand-dark-blue;
+  background: $color-primary;
 }
 .btn-secondary {
-  background: $color-brand-blue;
+  background: $color-secondary;
 }
 .btn-info {
-  background: $color-brand-blue;
+  background: $color-info;
 }
 .btn-success {
-  background: $color-ui-success;
+  background: $color-success;
 }
 .btn-warning {
-  background: $color-ui-warning;
+  background: $color-warning;
 }
 .btn-error {
-  background: $color-ui-error;
+  background: $color-error;
 }
+[class*="-outline"] {
+  background: none;
+}
+.btn-primary-outline {
+  border: 3px solid rgba($color-primary, 1);
+  color: $color-primary;
+}
+.btn-secondary-outline {
+  border: 3px solid rgba($color-secondary, 1);
+  color: $color-secondary;
+}
+.btn-info-outline {
+  border: 3px solid rgba($color-info, 1);
+  color: $color-info;
+}
+.btn-success-outline {
+  border: 3px solid rgba($color-success, 1);
+  color: $color-success;
+}
+.btn-warning-outline {
+  border: 3px solid rgba($color-warning, 1);
+  color: $color-warning;
+}
+.btn-error-outline {
+  border: 3px solid rgba($color-error, 1);
+  color: $color-error;
+}
+
+/**
+  * Size
+  */
 .btn-xs {
   padding: space(2);
   font-size: $font-size-xs;
@@ -120,6 +161,9 @@ export default {
   padding: space(5);
   font-size: $font-size-lg;
 }
+/**
+ * Other
+ */
 .btn-block {
   display: block;
 }

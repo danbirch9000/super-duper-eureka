@@ -21,7 +21,6 @@ module.exports = {
         ignores: []
       }
     ],
-    "vue/no-v-html": "off",
     "no-console": "off"
   },
 

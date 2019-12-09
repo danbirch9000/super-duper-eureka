@@ -30,24 +30,24 @@ export default {
   line-height: 16px;
 }
 .pill-default {
-  background: $color-mono-7;
+  background: $color-default;
 }
 .pill-primary {
-  background: $color-brand-dark-blue;
+  background: $color-primary;
 }
 .pill-secondary {
-  background: $color-brand-blue;
+  background: $color-secondary;
 }
 .pill-info {
-  background: $color-brand-blue;
+  background: $color-info;
 }
 .pill-success {
-  background: $color-ui-success;
+  background: $color-success;
 }
 .pill-warning {
-  background: $color-ui-warning;
+  background: $color-warning;
 }
 .pill-error {
-  background: $color-ui-error;
+  background: $color-error;
 }
 </style>
