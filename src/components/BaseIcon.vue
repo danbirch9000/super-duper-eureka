@@ -6,7 +6,7 @@
 <script>
 export default {
   props: {
-    type: {
+    variant: {
       type: String,
       required: true
     },
@@ -17,7 +17,7 @@ export default {
   },
   computed: {
     getPath() {
-      return require(`../assets/icons/${this.type}.svg`);
+      return require(`../assets/icons/${this.variant}.svg`);
     }
   }
 };

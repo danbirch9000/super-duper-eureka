@@ -5,6 +5,8 @@
 $border-radius-sm: 4px;
 $skin-box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.1),
   -1px 2px 2px rgba(0, 0, 0, 0.1), 0px 0px 2px rgba(0, 0, 0, 0.1);
+$skin-box-shadow-inset: inset 1px 2px 2px rgba(0, 0, 0, 0.1),
+inset -1px 2px 2px rgba(0, 0, 0, 0.1), inset 0px 0px 2px rgba(0, 0, 0, 0.1); 
 
 /**
  * Skin

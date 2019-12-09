@@ -6,22 +6,22 @@ storiesOf("BaseTag", module).add("Variations", () => ({
   components: { BaseTag },
   template: `
       <div>
-        <BaseTag type="default">
+        <BaseTag variant="default">
           Default
         </BaseTag>
-        <BaseTag type="primary">
+        <BaseTag variant="primary">
           Primary
         </BaseTag>
-        <BaseTag type="secondary">
+        <BaseTag variant="secondary">
           Secondary
         </BaseTag>
-        <BaseTag type="success">
+        <BaseTag variant="success">
           Success
         </BaseTag>
-        <BaseTag type="warning">
+        <BaseTag variant="warning">
           Warning
         </BaseTag>
-        <BaseTag type="error">
+        <BaseTag variant="error">
           Error
         </BaseTag>        
       </div>

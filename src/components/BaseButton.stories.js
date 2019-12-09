@@ -17,23 +17,23 @@ storiesOf("BaseButton", module)
             Default
           </BaseButton>
           <br/><br/>
-          <BaseButton type="primary">
+          <BaseButton variant="primary">
             Primary
           </BaseButton>
           <br/><br/>
-          <BaseButton type="secondary">
+          <BaseButton variant="secondary">
             Secondary
           </BaseButton>
           <br/><br/>
-          <BaseButton type="success">
+          <BaseButton variant="success">
             Success
           </BaseButton>
           <br/><br/>
-          <BaseButton type="warning">
+          <BaseButton variant="warning">
             Warning
           </BaseButton>
           <br/><br/>
-          <BaseButton type="error">
+          <BaseButton variant="error">
             Error
           </BaseButton>
           <br/><br/>
@@ -52,19 +52,19 @@ storiesOf("BaseButton", module)
     components: { BaseButton },
     template: `
         <div>
-          <BaseButton size="xs" type="primary">
+          <BaseButton size="xs" variant="primary">
             Extra Small
           </BaseButton>
           <br/><br/>
-          <BaseButton size="sm" type="primary">
+          <BaseButton size="sm" variant="primary">
             Small
           </BaseButton>
           <br/><br/>
-          <BaseButton size="md" type="primary">
+          <BaseButton size="md" variant="primary">
             Mediun
           </BaseButton>
           <br/><br/>
-          <BaseButton size="lg" type="primary">
+          <BaseButton size="lg" variant="primary">
             Large
           </BaseButton>
         </div>
@@ -74,23 +74,23 @@ storiesOf("BaseButton", module)
     components: { BaseButton },
     template: `
         <div>
-          <BaseButton type="primary-outline">
+          <BaseButton variant="primary-outline">
             Primary
           </BaseButton>
           <br/><br/>
-          <BaseButton type="secondary-outline">
+          <BaseButton variant="secondary-outline">
             Secondary
           </BaseButton>
           <br/><br/>
-          <BaseButton type="success-outline">
+          <BaseButton variant="success-outline">
             Success
           </BaseButton>
           <br/><br/>
-          <BaseButton type="warning-outline">
+          <BaseButton variant="warning-outline">
             Warning
           </BaseButton>
           <br/><br/>
-          <BaseButton type="error-outline">
+          <BaseButton variant="error-outline">
             Error
           </BaseButton>
           <br/><br/>
@@ -104,12 +104,12 @@ storiesOf("BaseButton", module)
     components: { BaseButton, BaseIcon },
     template: `
         <div>        
-          <BaseButton type="primary">
-            <BaseIcon type="cog" size="md" /> With icon
+          <BaseButton variant="primary">
+            <BaseIcon variant="cog" size="md" /> With icon
           </BaseButton>
           <br/><br/>
-          <BaseButton type="primary">
-            <BaseIcon type="cog" size="lg"/>
+          <BaseButton variant="primary">
+            <BaseIcon variant="cog" size="lg"/>
           </BaseButton>
           <br/><br/>          
         </div>

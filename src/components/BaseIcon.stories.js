@@ -6,9 +6,9 @@ storiesOf("BaseIcon", module).add("Variations", () => ({
   components: { BaseIcon },
   template: `
       <div>
-        <BaseIcon type="cog"/>
-        <BaseIcon type="cog" size="sm"/>
-        <BaseIcon type="cog" size="lg"/>
+        <BaseIcon variant="cog"/>
+        <BaseIcon variant="cog" size="sm"/>
+        <BaseIcon variant="cog" size="lg"/>
       </div>
       `
 }));

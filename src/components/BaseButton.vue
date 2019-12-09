@@ -8,7 +8,7 @@
 export default {
   name: "BaseButton",
   props: {
-    type: {
+    variant: {
       type: String,
       default: "default",
       validator: val =>
@@ -45,9 +45,9 @@ export default {
   },
   computed: {
     getStyles() {
-      let { type, size, disabled, block } = this;
-      type = disabled ? "disabled" : type;
-      let styles = `btn btn-${type} btn-${size}`;
+      let { variant, size, disabled, block } = this;
+      variant = disabled ? "disabled" : variant;
+      let styles = `btn btn-${variant} btn-${size}`;
       styles += block ? ` btn-block` : ``;
       return styles;
     }
@@ -72,10 +72,10 @@ export default {
   cursor: pointer;
   color: white;
   line-height: 16px;
-  border: 3px solid rgba($color-primary, 0);
+  border: 3px solid rgba($color-theme-primary, 0);
   &:hover,
   &:focus {
-    border: 3px solid rgba($color-primary, 1);
+    border: 3px solid rgba($color-theme-primary, 1);
   }
 }
 .btn-disabled {
@@ -83,7 +83,7 @@ export default {
   cursor: not-allowed;
   &:hover,
   &:focus {
-    border: 3px solid rgba($color-primary, 0);
+    border: 3px solid rgba($color-theme-primary, 0);
   }
 }
 
@@ -93,53 +93,53 @@ export default {
   border-radius: 0;
   &:hover,
   &:focus {
-    border: 3px solid rgba($color-primary, 0);
+    border: 3px solid rgba($color-theme-primary, 0);
   }
 }
 .btn-primary {
-  background: $color-primary;
+  background: $color-theme-primary;
 }
 .btn-secondary {
-  background: $color-secondary;
+  background: $color-theme-secondary;
 }
 .btn-info {
-  background: $color-info;
+  background: $color-theme-info;
 }
 .btn-success {
-  background: $color-success;
+  background: $color-theme-success;
 }
 .btn-warning {
-  background: $color-warning;
+  background: $color-theme-warning;
 }
 .btn-error {
-  background: $color-error;
+  background: $color-theme-error;
 }
 [class*="-outline"] {
   background: none;
 }
 .btn-primary-outline {
-  border: 3px solid rgba($color-primary, 1);
-  color: $color-primary;
+  border: 3px solid rgba($color-theme-primary, 1);
+  color: $color-theme-primary;
 }
 .btn-secondary-outline {
-  border: 3px solid rgba($color-secondary, 1);
-  color: $color-secondary;
+  border: 3px solid rgba($color-theme-secondary, 1);
+  color: $color-theme-secondary;
 }
 .btn-info-outline {
-  border: 3px solid rgba($color-info, 1);
-  color: $color-info;
+  border: 3px solid rgba($color-theme-info, 1);
+  color: $color-theme-info;
 }
 .btn-success-outline {
-  border: 3px solid rgba($color-success, 1);
-  color: $color-success;
+  border: 3px solid rgba($color-theme-success, 1);
+  color: $color-theme-success;
 }
 .btn-warning-outline {
-  border: 3px solid rgba($color-warning, 1);
-  color: $color-warning;
+  border: 3px solid rgba($color-theme-warning, 1);
+  color: $color-theme-warning;
 }
 .btn-error-outline {
-  border: 3px solid rgba($color-error, 1);
-  color: $color-error;
+  border: 3px solid rgba($color-theme-error, 1);
+  color: $color-theme-error;
 }
 
 /**

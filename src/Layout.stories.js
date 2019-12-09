@@ -46,21 +46,9 @@ storiesOf("Layouts", module).add("Variations", () => ({
       <Breadcrumb :items="breadcrumb" />
       <PageHeader>
         Page header
-      </PageHeader>
-      <PageSubHeader>
-        Page sub heder
-      </PageSubHeader>
+      </PageHeader>      
       <PageWrapper>
-        <div class="container">
-          <DropdownMenu>
-            <template v-slot:menu-button="{ on }">
-              <BaseButton v-on="on">
-                Go to section <BaseIcon type="chevron-down" />
-              </BaseButton>
-            </template>
-            My list
-          </DropdownMenu>
-        </div>
+
       </PageWrapper>
     </div>
     `

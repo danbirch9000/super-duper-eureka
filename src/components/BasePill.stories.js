@@ -6,22 +6,22 @@ storiesOf("BasePill", module).add("Variations", () => ({
   components: { BasePill },
   template: `
       <div>
-        <BasePill type="default">
+        <BasePill variant="default">
           0
         </BasePill>
-        <BasePill type="primary">
+        <BasePill variant="primary">
           1
         </BasePill>
-        <BasePill type="secondary">
+        <BasePill variant="secondary">
           2
         </BasePill>
-        <BasePill type="success">
+        <BasePill variant="success">
           3
         </BasePill>
-        <BasePill type="warning">
+        <BasePill variant="warning">
           4
         </BasePill>
-        <BasePill type="error">
+        <BasePill variant="error">
           5
         </BasePill>
       </div>

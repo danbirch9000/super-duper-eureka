@@ -47,16 +47,6 @@
 }
 
 /**
- * Skins
- */
-
-@mixin skin-card() {
-  box-shadow: $skin-box-shadow;
-  background: $color-brand-white;
-  border-radius: $border-radius-sm;
-}
-
-/**
  * Helpers
  */
 

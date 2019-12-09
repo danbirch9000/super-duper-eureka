@@ -1,33 +1,103 @@
 <template>
   <div class="menu">
-    <span class="menu-button">
-      <slot name="menu-button" :on="on" />
+    {{ buttonHeight }}
+    <span ref="menuButton" class="menu-button">
+      <slot name="menu-button" :on="on">
+        <BaseButton :disabled="disabled" v-on="on">
+          {{ text }}
+          <BaseIcon :variant="active ? 'chevron-up' : 'chevron-down'" />
+        </BaseButton>
+      </slot>
     </span>
     <div class="menu-inner">
-      <div class="menu-nav">
-        <slot v-if="active" />
+      <div ref="menuNav" class="menu-nav" :style="menuNavPosition">
+        <slot v-if="active">
+          <BaseCard :variant="variant">
+            <div
+              v-for="(item, index) in items"
+              :key="index"
+              tab-index="0"
+              class="menu-nav-item"
+              @click="item.action ? item.action : undefined"
+            >
+              {{ item.text }}
+            </div>
+          </BaseCard>
+        </slot>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import BaseIcon from "@/components/BaseIcon";
+import BaseButton from "@/components/BaseButton";
+import BaseCard from "@/components/BaseCard";
 export default {
   name: "DropdownMenu",
+  components: {
+    BaseIcon,
+    BaseButton,
+    BaseCard
+  },
+  props: {
+    disabled: {
+      type: Boolean,
+      default: false
+    },
+    position: {
+      type: String,
+      default: "bottom"
+    },
+    variant: {
+      type: String,
+      default: "default"
+    },
+    text: {
+      type: String,
+      default: ""
+    },
+    items: {
+      type: Array,
+      default: () => []
+    }
+  },
   data() {
     return {
-      active: false
+      active: false,
+      menuNavPosition: ""
     };
   },
   computed: {
     on() {
-      console.log("--");
       return {
         click: this.handleClick
       };
+    },
+    buttonHeight() {
+      return this.$refs.menuButton && this.$refs.menuButton.clientHeight;
     }
   },
+  mounted() {
+    this.setMenuNavStyle();
+  },
   methods: {
+    setMenuNavStyle() {
+      const { position, $refs } = this;
+      let top;
+      let left;
+      if (position === "right") {
+        top = 0;
+        left = $refs.menuButton.clientWidth + 10;
+      } else {
+        top = $refs.menuButton.clientHeight + 10;
+        left = 0;
+      }
+      this.menuNavPosition = `
+        transform: translate3d(${left}px, ${top}px, ${0}px);
+        min-width: ${$refs.menuButton.clientWidth}px;
+      `;
+    },
     handleClick() {
       this.toggleMenu();
     },
@@ -61,13 +131,22 @@ export default {
 .menu-button /deep/ * {
   height: inherit;
 }
-.menu-inner {
+.menu {
   position: relative;
+}
+.menu-button {
+  display: inline-block;
 }
 .menu-nav {
   position: absolute;
+  z-index: $z-index-dropdown;
   top: 0;
   left: 0;
-  transform: translate3d(0px, 10px, 0px);
+  color: $color-theme-primary;
+}
+.menu-nav-item {
+  white-space: nowrap;
+  padding: space(2) 0;
+  cursor: pointer;
 }
 </style>

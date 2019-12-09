@@ -1,5 +1,5 @@
 <template>
-  <div :class="`pill pill-${type}`">
+  <div :class="`pill pill-${variant}`">
     <slot />
   </div>
 </template>
@@ -8,7 +8,7 @@
 export default {
   name: "BasePill",
   props: {
-    type: {
+    variant: {
       type: String,
       default: "default"
     }
@@ -30,24 +30,24 @@ export default {
   line-height: 16px;
 }
 .pill-default {
-  background: $color-default;
+  background: $color-theme-default;
 }
 .pill-primary {
-  background: $color-primary;
+  background: $color-theme-primary;
 }
 .pill-secondary {
-  background: $color-secondary;
+  background: $color-theme-secondary;
 }
 .pill-info {
-  background: $color-info;
+  background: $color-theme-info;
 }
 .pill-success {
-  background: $color-success;
+  background: $color-theme-success;
 }
 .pill-warning {
-  background: $color-warning;
+  background: $color-theme-warning;
 }
 .pill-error {
-  background: $color-error;
+  background: $color-theme-error;
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div :class="`tag tag-${type}`">
+  <div :class="`tag tag-${variant}`">
     <slot />
   </div>
 </template>
@@ -8,7 +8,7 @@
 export default {
   name: "BaseTag",
   props: {
-    type: {
+    variant: {
       type: String,
       default: "default"
     }
@@ -30,24 +30,24 @@ export default {
   line-height: 16px;
 }
 .tag-default {
-  background: $color-default;
+  background: $color-theme-default;
 }
 .tag-primary {
-  background: $color-primary;
+  background: $color-theme-primary;
 }
 .tag-secondary {
-  background: $color-secondary;
+  background: $color-theme-secondary;
 }
 .tag-info {
-  background: $color-info;
+  background: $color-theme-info;
 }
 .tag-success {
-  background: $color-success;
+  background: $color-theme-success;
 }
 .tag-warning {
-  background: $color-warning;
+  background: $color-theme-warning;
 }
 .tag-error {
-  background: $color-error;
+  background: $color-theme-error;
 }
 </style>

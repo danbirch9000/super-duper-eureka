@@ -1,7 +1,7 @@
 <template>
-  <div :class="`alert-message alert-message-${type}`">
+  <div :class="`alert-message alert-message-${variant}`">
     <slot name="icon">
-      <BaseIcon :type="iconType" size="lg" class="icon" />
+      <BaseIcon :variant="iconType" size="lg" class="icon" />
     </slot>
     <div class="alert-message-inner">
       <slot />
@@ -17,7 +17,7 @@ export default {
     BaseIcon
   },
   props: {
-    type: {
+    variant: {
       type: String,
       default: "default"
     }
@@ -31,7 +31,7 @@ export default {
         warning: "circle-warning",
         error: "circle-error"
       };
-      return iconMap[this.type];
+      return iconMap[this.variant];
     }
   }
 };
@@ -46,19 +46,19 @@ export default {
   position: relative;
 }
 .alert-message-default {
-  background: $color-default;
+  background: $color-theme-default;
 }
 .alert-message-info {
-  background: $color-info;
+  background: $color-theme-info;
 }
 .alert-message-success {
-  background: $color-success;
+  background: $color-theme-success;
 }
 .alert-message-warning {
-  background: $color-warning;
+  background: $color-theme-warning;
 }
 .alert-message-error {
-  background: $color-error;
+  background: $color-theme-error;
 }
 
 .icon {

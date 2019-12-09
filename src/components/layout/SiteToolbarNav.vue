@@ -1,46 +1,47 @@
 <template>
   <ul class="toolbar-nav">
     <li>
-      <DropdownMenu class="go-to-menu">
+      <DropdownMenu class="go-to-menu" :items="items">
         <template v-slot:menu-button="{ on }">
           <BaseButton size="sm" v-on="on">
             Go to section
-            <BaseIcon type="chevron-down" />
+            <BaseIcon variant="chevron-down" />
           </BaseButton>
         </template>
-        <BaseCard>
-          <div role="list">
-            <div class="list-item">
-              <span class="p">BaseHeading of some kind</span>
-              <span class="p-sm"
-                >Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Labore provident, excepturi porro quasi recusandae ullam eaque
-                iste dignissimos. Velit nisi iusto corporis illo similique
-                dolores laboriosam praesentium, quae facilis ut?</span
-              >
-            </div>
-          </div>
-        </BaseCard>
       </DropdownMenu>
     </li>
     <li>
-      <BaseButton size="sm"><BaseIcon type="log-out" /> Logout</BaseButton>
+      <BaseButton size="sm"><BaseIcon variant="log-out" /> Logout</BaseButton>
     </li>
   </ul>
 </template>
 
 <script>
 import DropdownMenu from "@/components/nav/DropdownMenu";
-import BaseCard from "@/components/BaseCard";
 import BaseIcon from "@/components/BaseIcon";
 import BaseButton from "@/components/BaseButton";
 export default {
   name: "SiteToolbarNav",
   components: {
     DropdownMenu,
-    BaseCard,
     BaseIcon,
     BaseButton
+  },
+  data() {
+    return {
+      items: [
+        {
+          text: "Home",
+          action: () => console.log("Go to home")
+        },
+        {
+          text: "Client DB"
+        },
+        {
+          text: "FMS"
+        }
+      ]
+    };
   }
 };
 </script>

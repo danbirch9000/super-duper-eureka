@@ -6,7 +6,7 @@
           <li v-for="(item, index) in items" :key="index">
             <template v-if="item.to">
               <BaseLink :to="item.to">{{ item.text }}</BaseLink>
-              <BaseIcon type="chevron-right" />
+              <BaseIcon variant="chevron-right" />
             </template>
             <template v-else>{{ item.text }}</template>
           </li>
