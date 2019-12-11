@@ -46,9 +46,8 @@ storiesOf("Layouts", module).add("Variations", () => ({
       <Breadcrumb :items="breadcrumb" />
       <PageHeader>
         Page header
-      </PageHeader>      
+      </PageHeader>
       <PageWrapper>
-
       </PageWrapper>
     </div>
     `

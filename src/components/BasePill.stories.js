@@ -22,7 +22,7 @@ storiesOf("BasePill", module).add("Variations", () => ({
           4
         </BasePill>
         <BasePill variant="error">
-          5
+          0123456789
         </BasePill>
       </div>
       `

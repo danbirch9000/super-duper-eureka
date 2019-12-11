@@ -21,7 +21,8 @@ module.exports = {
         ignores: []
       }
     ],
-    "no-console": "off"
+    "vue/no-unused-components": "warn",
+    "no-console": "warn"
   },
 
   parserOptions: {

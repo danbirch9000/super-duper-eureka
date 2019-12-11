@@ -3,6 +3,7 @@ import { storiesOf } from "@storybook/vue";
 import { action } from "@storybook/addon-actions";
 import markdown from "@/components/BaseButton.md";
 import BaseIcon from "@/components/BaseIcon.vue";
+import BasePill from "@/components/BasePill.vue";
 
 import BaseButton from "@/components/BaseButton.vue";
 
@@ -101,9 +102,9 @@ storiesOf("BaseButton", module)
       `
   }))
   .add("With icons", () => ({
-    components: { BaseButton, BaseIcon },
+    components: { BaseButton, BaseIcon, BasePill },
     template: `
-        <div>        
+        <div>
           <BaseButton variant="primary">
             <BaseIcon variant="cog" size="md" /> With icon
           </BaseButton>
@@ -111,7 +112,11 @@ storiesOf("BaseButton", module)
           <BaseButton variant="primary">
             <BaseIcon variant="cog" size="lg"/>
           </BaseButton>
-          <br/><br/>          
+          <br/><br/>
+          <BaseButton variant="primary" size="md">
+            <BasePill variant="info">3</BasePill> Notifications
+          </BaseButton>
+          <br/><br/>
         </div>
       `
   }));

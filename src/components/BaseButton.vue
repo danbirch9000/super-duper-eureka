@@ -1,5 +1,5 @@
 <template>
-  <button :class="getStyles" :disabled="disabled" @click="handleClick">
+  <button :class="styles" :disabled="disabled" @click="handleClick">
     <slot />
   </button>
 </template>
@@ -44,7 +44,7 @@ export default {
     }
   },
   computed: {
-    getStyles() {
+    styles() {
       let { variant, size, disabled, block } = this;
       variant = disabled ? "disabled" : variant;
       let styles = `btn btn-${variant} btn-${size}`;
