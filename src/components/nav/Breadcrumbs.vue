@@ -21,7 +21,7 @@ import SiteWrapper from "@/components/layout/SiteWrapper";
 import BaseLink from "@/components/BaseLink";
 import BaseIcon from "@/components/BaseIcon";
 export default {
-  name: "Breadcrumb",
+  name: "Breadcrumbs",
   components: {
     SiteWrapper,
     BaseLink,

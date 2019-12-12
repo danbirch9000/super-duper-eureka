@@ -6,7 +6,7 @@ import SiteToolbarNav from "@/components/layout/SiteToolbarNav.vue";
 import PageWrapper from "@/components/layout/PageWrapper";
 import PageHeader from "@/components/layout/PageHeader";
 import PageSubHeader from "@/components/layout/PageSubHeader";
-import Breadcrumb from "@/components/nav/Breadcrumb";
+import Breadcrumbs from "@/components/nav/Breadcrumbs";
 import DropdownMenu from "@/components/nav/DropdownMenu";
 import BaseButton from "@/components/BaseButton";
 import BaseIcon from "@/components/BaseIcon";
@@ -32,7 +32,7 @@ storiesOf("Layouts", module).add("Variations", () => ({
     PageWrapper,
     PageHeader,
     PageSubHeader,
-    Breadcrumb,
+    Breadcrumbs,
     DropdownMenu,
     BaseButton,
     BaseIcon
@@ -43,7 +43,7 @@ storiesOf("Layouts", module).add("Variations", () => ({
         <SiteToolbarNav />
       </SiteToolbar>
       <SiteHeader v-slot="" />
-      <Breadcrumb :items="breadcrumb" />
+      <Breadcrumbs :items="breadcrumb" />
       <PageHeader>
         Page header
       </PageHeader>
