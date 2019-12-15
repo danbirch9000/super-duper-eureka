@@ -1,7 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import { storiesOf } from "@storybook/vue";
 
-storiesOf("Typography", module).add("Base", () => ({
+storiesOf("Typography", module).add("Variations", () => ({
   template: `
     <div>
       <h1>Headline one</h1>

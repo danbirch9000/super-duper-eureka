@@ -1,14 +1,14 @@
 <template>
-  <div :class="`pill pill-${variant}`">
+  <div :class="`tag tag-${theme}`">
     <slot />
   </div>
 </template>
 
 <script>
 export default {
-  name: "BasePill",
+  name: "VTag",
   props: {
-    variant: {
+    theme: {
       type: String,
       default: "default"
     }
@@ -17,52 +17,37 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.pill {
+.tag {
   font-weight: $font-weight-bold;
-
+  border-radius: $border-radius-sm;
   display: inline-block;
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
-  padding: 0 space(2);
+  padding: space(1) space(2);
   font-size: $font-size-xs;
   color: white;
   line-height: 16px;
-  position: relative;
-  z-index: 3;
-  &:after {
-    z-index: -1;
-    content: "";
-    top: 0;
-    left: 0;
-    transform: translate(0, -(space(1)));
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    border-radius: 100px;
-    padding: space(3) 0;
-    display: block;
-  }
 }
-.pill-default:after {
+.tag-default {
   background: $color-theme-default;
 }
-.pill-primary:after {
+.tag-primary {
   background: $color-theme-primary;
 }
-.pill-secondary:after {
+.tag-secondary {
   background: $color-theme-secondary;
 }
-.pill-info:after {
+.tag-info {
   background: $color-theme-info;
 }
-.pill-success:after {
+.tag-success {
   background: $color-theme-success;
 }
-.pill-warning:after {
+.tag-warning {
   background: $color-theme-warning;
 }
-.pill-error:after {
+.tag-error {
   background: $color-theme-error;
 }
 </style>

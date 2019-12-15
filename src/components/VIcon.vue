@@ -26,7 +26,7 @@ export default {
 <style lang="scss" scoped>
 .icon {
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: text-bottom;
   line-height: 0;
   /deep/ svg {
     color: inherit;
@@ -34,9 +34,13 @@ export default {
     height: inherit;
   }
 }
-.icon-sm {
+.icon-xs {
   width: 12px;
   height: 12px;
+}
+.icon-sm {
+  width: 14px;
+  height: 14px;
 }
 .icon-md {
   width: 16px;
@@ -45,9 +49,5 @@ export default {
 .icon-lg {
   width: 24px;
   height: 24px;
-}
-.icon-xl {
-  width: 32px;
-  height: 32px;
 }
 </style>

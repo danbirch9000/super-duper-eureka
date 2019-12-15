@@ -6,8 +6,13 @@
 
 <script>
 export default {
+  name: "VTabs",
+  model: {
+    prop: "active",
+    event: "active"
+  },
   props: {
-    value: {
+    active: {
       type: [String, Number],
       default: ""
     },
@@ -18,18 +23,18 @@ export default {
   },
   data() {
     return {
-      selected: null
+      privateActive: null
     };
   },
   mounted() {
     if (this.hash && window.location.hash) {
-      this.selected = window.location.hash.charAt(1);
+      this.privateActive = window.location.hash.charAt(1);
     } else {
-      this.selected = this.value;
+      this.privateActive = this.active;
     }
-    this.$on("selected", val => {
-      this.selected = val;
-      this.$emit("input", val);
+    this.$on("active", val => {
+      this.privateActive = val;
+      this.$emit("active", val);
     });
   }
 };

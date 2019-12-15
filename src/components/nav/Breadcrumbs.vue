@@ -5,8 +5,8 @@
         <ul class="breadcrumb-nav">
           <li v-for="(item, index) in items" :key="index">
             <template v-if="item.to">
-              <BaseLink :to="item.to">{{ item.text }}</BaseLink>
-              <BaseIcon variant="chevron-right" />
+              <VLink :to="item.to">{{ item.text }}</VLink>
+              <VIcon variant="chevron-right" />
             </template>
             <template v-else>{{ item.text }}</template>
           </li>
@@ -18,14 +18,14 @@
 
 <script>
 import SiteWrapper from "@/components/layout/SiteWrapper";
-import BaseLink from "@/components/BaseLink";
-import BaseIcon from "@/components/BaseIcon";
+import VLink from "@/components/VLink";
+import VIcon from "@/components/VIcon";
 export default {
   name: "Breadcrumbs",
   components: {
     SiteWrapper,
-    BaseLink,
-    BaseIcon
+    VLink,
+    VIcon
   },
   props: {
     items: {

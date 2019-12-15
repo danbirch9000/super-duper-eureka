@@ -22,7 +22,8 @@ module.exports = {
       }
     ],
     "vue/no-unused-components": "warn",
-    "no-console": "warn"
+    "no-console": "warn",
+    "no-unused-vars": "warn"
   },
 
   parserOptions: {

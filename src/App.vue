@@ -1,0 +1,20 @@
+<template>
+  <div class="wrapper"></div>
+</template>
+
+<script>
+// import FormInput from "@/components/forms/FormInput";
+export default {
+  name: "App"
+};
+</script>
+
+<style lang="scss">
+// required to pre-import main.scss
+.wrapper {
+  margin: 0 auto;
+  background: white;
+  padding: space(8);
+  max-width: 900px;
+}
+</style>

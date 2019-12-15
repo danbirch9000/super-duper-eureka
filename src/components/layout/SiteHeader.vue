@@ -2,9 +2,9 @@
   <header class="header" role="banner">
     <SiteWrapper size="lg">
       <div class="header-inner">
-        <BaseLink to="/">
+        <VLink to="/">
           <SiteLogo class="logo" />
-        </BaseLink>
+        </VLink>
       </div>
     </SiteWrapper>
   </header>
@@ -13,14 +13,14 @@
 <script>
 import SiteLogo from "./SiteLogo.vue";
 import SiteWrapper from "@/components/layout/SiteWrapper";
-import BaseLink from "@/components/BaseLink";
+import VLink from "@/components/VLink";
 
 export default {
   name: "SiteHeader",
   components: {
     SiteLogo,
     SiteWrapper,
-    BaseLink
+    VLink
   }
 };
 </script>

@@ -6,13 +6,14 @@
 
 <script>
 export default {
-  name: "BaseButton",
+  name: "VButton",
   props: {
-    variant: {
+    theme: {
       type: String,
       default: "default",
       validator: val =>
         [
+          "blank",
           "default",
           "primary",
           "secondary",
@@ -45,9 +46,9 @@ export default {
   },
   computed: {
     styles() {
-      let { variant, size, disabled, block } = this;
-      variant = disabled ? "disabled" : variant;
-      let styles = `btn btn-${variant} btn-${size}`;
+      let { theme, size, disabled, block } = this;
+      theme = disabled ? "disabled" : theme;
+      let styles = `btn btn-${theme} btn-${size}`;
       styles += block ? ` btn-block` : ``;
       return styles;
     }
@@ -71,7 +72,6 @@ export default {
   vertical-align: middle;
   cursor: pointer;
   color: white;
-  line-height: 16px;
   border: 3px solid rgba($color-theme-primary, 0);
   &:hover,
   &:focus {
@@ -88,6 +88,9 @@ export default {
 }
 
 .btn-default {
+  background: $color-theme-default;
+}
+.btn-blank {
   background: none;
   color: inherit;
   border-radius: 0;
@@ -147,18 +150,22 @@ export default {
   */
 .btn-xs {
   padding: space(2);
+  line-height: 10px;
   font-size: $font-size-xs;
 }
 .btn-sm {
   padding: space(3);
+  line-height: 12px;
   font-size: $font-size-sm;
 }
 .btn-md {
   padding: space(4);
+  line-height: 14px;
   font-size: $font-size-md;
 }
 .btn-lg {
   padding: space(5);
+  line-height: 100%;
   font-size: $font-size-lg;
 }
 /**
@@ -166,5 +173,6 @@ export default {
  */
 .btn-block {
   display: block;
+  width: 100%;
 }
 </style>

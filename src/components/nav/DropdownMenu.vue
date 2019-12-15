@@ -1,18 +1,17 @@
 <template>
   <div class="menu">
-    {{ buttonHeight }}
     <span ref="menuButton" class="menu-button">
       <slot name="menu-button" :on="on">
-        <BaseButton :disabled="disabled" v-on="on">
+        <VButton :disabled="disabled" theme="blank" v-on="on">
           {{ text }}
-          <BaseIcon :variant="active ? 'chevron-up' : 'chevron-down'" />
-        </BaseButton>
+          <VIcon :variant="active ? 'chevron-up' : 'chevron-down'" />
+        </VButton>
       </slot>
     </span>
     <div class="menu-inner">
       <div ref="menuNav" class="menu-nav" :style="menuNavPosition">
         <slot v-if="active">
-          <BaseCard :variant="variant">
+          <VCard :theme="theme">
             <div
               v-for="(item, index) in items"
               :key="index"
@@ -22,7 +21,7 @@
             >
               {{ item.text }}
             </div>
-          </BaseCard>
+          </VCard>
         </slot>
       </div>
     </div>
@@ -30,15 +29,15 @@
 </template>
 
 <script>
-import BaseIcon from "@/components/BaseIcon";
-import BaseButton from "@/components/BaseButton";
-import BaseCard from "@/components/BaseCard";
+import VIcon from "@/components/VIcon";
+import VButton from "@/components/VButton";
+import VCard from "@/components/VCard";
 export default {
   name: "DropdownMenu",
   components: {
-    BaseIcon,
-    BaseButton,
-    BaseCard
+    VIcon,
+    VButton,
+    VCard
   },
   props: {
     disabled: {
@@ -49,7 +48,7 @@ export default {
       type: String,
       default: "bottom"
     },
-    variant: {
+    theme: {
       type: String,
       default: "default"
     },
@@ -99,17 +98,17 @@ export default {
       `;
     },
     handleClick() {
-      this.toggleMenu();
+      this.toggle();
     },
-    toggleMenu() {
-      return this.active ? this.hideMenu() : this.showMenu();
+    toggle() {
+      return this.active ? this.close() : this.open();
     },
-    showMenu() {
+    open() {
       this.active = true;
       this.$emit("active", true);
       document.addEventListener("click", this.handleGlobalClick);
     },
-    hideMenu() {
+    close() {
       this.active = false;
       this.$emit("active", false);
       document.removeEventListener("click", this.handleGlobalClick);
@@ -119,7 +118,7 @@ export default {
         .getElementsByClassName("menu-button")[0]
         .contains(e.target)
         ? undefined
-        : this.hideMenu();
+        : this.close();
     }
   }
 };
@@ -143,9 +142,9 @@ export default {
   top: 0;
   left: 0;
   color: $color-theme-primary;
+  white-space: nowrap;
 }
 .menu-nav-item {
-  white-space: nowrap;
   padding: space(2) 0;
   cursor: pointer;
 }

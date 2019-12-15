@@ -1,16 +1,14 @@
 <template>
-  <div
-    :class="`card card-${variant} card-${size} ${inset ? 'card-inset' : ''}`"
-  >
+  <div :class="`card card-${theme} card-${size} ${inset ? 'card-inset' : ''}`">
     <slot />
   </div>
 </template>
 
 <script>
 export default {
-  name: "BaseCard",
+  name: "VCard",
   props: {
-    variant: {
+    theme: {
       type: String,
       default: "default"
     },

@@ -1,9 +1,9 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import { storiesOf } from "@storybook/vue";
 import DropdownMenu from "@/components/nav/DropdownMenu.vue";
-import BaseCard from "@/components/BaseCard";
-import BaseIcon from "@/components/BaseIcon";
-import BaseButton from "@/components/BaseButton";
+import VCard from "@/components/VCard";
+import VIcon from "@/components/VIcon";
+import VButton from "@/components/VButton";
 
 storiesOf("DropdownMenu", module).add("Variations", () => ({
   data() {
@@ -11,7 +11,7 @@ storiesOf("DropdownMenu", module).add("Variations", () => ({
       items: [
         {
           text: "List item",
-          action: () => console.log("This action")
+          action: () => alert("This action")
         },
         {
           text: "Another list item"
@@ -24,22 +24,24 @@ storiesOf("DropdownMenu", module).add("Variations", () => ({
   },
   components: {
     DropdownMenu,
-    BaseCard,
-    BaseIcon,
-    BaseButton
+    VCard,
+    VIcon,
+    VButton
   },
   template: `
     <div>
-      <DropdownMenu text="Click me" :items="items" />      
+      <DropdownMenu text="Click me" :items="items" />
+      <br/><br/>
       <DropdownMenu text="Click me" :items="items" position="right"/>
+      <br/><br/>
       <DropdownMenu>
         <template v-slot:menu-button="{ on }">
-          <BaseButton size="sm" v-on="on">
-            <BaseIcon variant="cog" />
+          <VButton size="sm" theme="primary" v-on="on">
+            <VIcon variant="cog" />
             Custom button
-          </BaseButton>
+          </VButton>
         </template>
-        <BaseCard>
+        <VCard>
           <div role="list">
             <div class="list-item">
               <span class="p">Custom menu</span>
@@ -50,7 +52,7 @@ storiesOf("DropdownMenu", module).add("Variations", () => ({
               </span>
             </div>
           </div>
-        </BaseCard>
+        </VCard>
       </DropdownMenu>
     </div>
     `

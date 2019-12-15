@@ -1,10 +1,10 @@
 <template>
   <div class="tab">
     <a
-      :href="`#${this.target}`"
+      :href="`#${target}`"
       class="tab-btn"
-      :class="{ 'tab-btn-active': this.$parent.selected == this.target }"
-      @click="handleClick"
+      :class="{ 'tab-btn-active': $parent.active == target }"
+      @click.prevent="handleClick"
     >
       <slot />
     </a>
@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  name: "BaseTab",
+  name: "VTab",
   props: {
     target: {
       type: [String, Number],
@@ -26,7 +26,10 @@ export default {
   },
   methods: {
     handleClick() {
-      this.$parent.$emit("selected", this.target);
+      if (this.$router && this.$parent.hash) {
+        this.$router.push({ hash: `#${this.target}` });
+      }
+      this.$parent.$emit("active", this.target);
     }
   }
 };

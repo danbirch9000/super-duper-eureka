@@ -8,8 +8,8 @@ import PageHeader from "@/components/layout/PageHeader";
 import PageSubHeader from "@/components/layout/PageSubHeader";
 import Breadcrumbs from "@/components/nav/Breadcrumbs";
 import DropdownMenu from "@/components/nav/DropdownMenu";
-import BaseButton from "@/components/BaseButton";
-import BaseIcon from "@/components/BaseIcon";
+import VButton from "@/components/VButton";
+import VIcon from "@/components/VIcon";
 
 storiesOf("Layouts", module).add("Variations", () => ({
   data() {
@@ -34,8 +34,8 @@ storiesOf("Layouts", module).add("Variations", () => ({
     PageSubHeader,
     Breadcrumbs,
     DropdownMenu,
-    BaseButton,
-    BaseIcon
+    VButton,
+    VIcon
   },
   template: `
     <div id="app">

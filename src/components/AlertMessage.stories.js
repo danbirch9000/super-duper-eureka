@@ -6,19 +6,19 @@ storiesOf("AlertMessage", module).add("Variations", () => ({
   components: { AlertMessage },
   template: `
       <div>
-        <AlertMessage variant="default">
+        <AlertMessage theme="default">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. harum.
         </AlertMessage>
-        <AlertMessage variant="info">
+        <AlertMessage theme="info">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. harum.
         </AlertMessage>
-        <AlertMessage variant="success">
+        <AlertMessage theme="success">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. harum.
         </AlertMessage>
-        <AlertMessage variant="warning">
+        <AlertMessage theme="warning">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. harum.
         </AlertMessage>
-        <AlertMessage variant="error">
+        <AlertMessage theme="error">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. harum.
         </AlertMessage>
       </div>

@@ -3,36 +3,38 @@
     <li>
       <DropdownMenu class="go-to-menu" :items="items">
         <template v-slot:menu-button="{ on }">
-          <BaseButton size="sm" v-on="on">
+          <VButton size="sm" theme="blank" v-on="on">
             Go to section
-            <BaseIcon variant="chevron-down" />
-          </BaseButton>
+            <VIcon variant="chevron-down" size="sm" />
+          </VButton>
         </template>
       </DropdownMenu>
     </li>
     <li>
-      <BaseButton size="sm"><BaseIcon variant="log-out" /> Logout</BaseButton>
+      <VButton size="sm" theme="blank">
+        <VIcon variant="log-out" size="sm" /> Logout
+      </VButton>
     </li>
   </ul>
 </template>
 
 <script>
 import DropdownMenu from "@/components/nav/DropdownMenu";
-import BaseIcon from "@/components/BaseIcon";
-import BaseButton from "@/components/BaseButton";
+import VIcon from "@/components/VIcon";
+import VButton from "@/components/VButton";
 export default {
   name: "SiteToolbarNav",
   components: {
     DropdownMenu,
-    BaseIcon,
-    BaseButton
+    VIcon,
+    VButton
   },
   data() {
     return {
       items: [
         {
           text: "Home",
-          action: () => console.log("Go to home")
+          action: () => alert("Go to home")
         },
         {
           text: "Client DB"

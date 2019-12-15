@@ -1,7 +1,7 @@
 <template>
-  <div :class="`alert-message alert-message-${variant}`">
+  <div :class="`alert-message alert-message-${theme}`">
     <slot name="icon">
-      <BaseIcon :variant="iconType" size="lg" class="icon" />
+      <VIcon :variant="iconType" size="lg" class="icon" />
     </slot>
     <div class="alert-message-inner">
       <slot />
@@ -10,14 +10,14 @@
 </template>
 
 <script>
-import BaseIcon from "@/components/BaseIcon";
+import VIcon from "@/components/VIcon";
 export default {
   name: "AlertMessage",
   components: {
-    BaseIcon
+    VIcon
   },
   props: {
-    variant: {
+    theme: {
       type: String,
       default: "default"
     }
@@ -31,7 +31,7 @@ export default {
         warning: "circle-warning",
         error: "circle-error"
       };
-      return iconMap[this.variant];
+      return iconMap[this.theme];
     }
   }
 };
@@ -63,7 +63,7 @@ export default {
 
 .icon {
   position: absolute;
-  top: space(2);
-  left: space(2);
+  top: 10px;
+  left: 10px;
 }
 </style>
