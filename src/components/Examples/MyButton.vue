@@ -17,13 +17,5 @@ export default {
 </script>
 
 <style lang="scss">
-button {
-  border: 2px solid $color;
-  border-radius: 3px;
-  background-color: #ffffff;
-  cursor: pointer;
-  font-size: 15pt;
-  padding: 3px 10px;
-  margin: 10px;
-}
+//
 </style>

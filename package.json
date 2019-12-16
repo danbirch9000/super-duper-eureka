@@ -12,7 +12,8 @@
     "storybook:serve": "vue-cli-service storybook:serve -p 6006 -c storybook/",
     "storybook:build": "vue-cli-service storybook:build -c storybook/",
     "test": "npm run test:unit",
-    "test:unit": "vue-cli-service test:unit"
+    "test:unit": "vue-cli-service test:unit",
+    "rebuild-sass": "npm rebuild node-sass"
   },
   "main": "./dist/wfp-vue-shared-components.umd.min.js",
   "files": [
@@ -21,6 +22,7 @@
   ],
   "dependencies": {
     "core-js": "^3.4.3",
+    "normalize.css": "^8.0.1",
     "vue": "^2.6.10"
   },
   "devDependencies": {
@@ -39,8 +41,10 @@
     "eslint-loader": "^3.0.2",
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-vue": "^5.2.3",
+    "html-loader": "^0.5.5",
     "husky": "^3.1.0",
     "lint-staged": "^9.5.0",
+    "markdown-loader": "^5.1.0",
     "node-sass": "^4.13.0",
     "prettier": "^1.19.1",
     "sass-loader": "^8.0.0",

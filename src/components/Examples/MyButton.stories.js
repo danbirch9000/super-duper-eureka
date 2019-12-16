@@ -3,12 +3,12 @@ import { storiesOf } from "@storybook/vue";
 import { action } from "@storybook/addon-actions";
 import { linkTo } from "@storybook/addon-links";
 
-import MyButton from "../components/MyButton.vue";
+import MyButton from "./MyButton";
 
-storiesOf("Button", module)
+storiesOf("Example story", module)
   .add("with text", () => ({
     components: { MyButton },
-    template: '<my-button @click="action">Hello Button</my-button>',
+    template: '<my-button @click="action">Hello VButton</my-button>',
     methods: { action: action("clicked") }
   }))
   .add("with JSX", () => ({
@@ -16,7 +16,7 @@ storiesOf("Button", module)
     render() {
       return <my-button onClick={this.action}>With JSX</my-button>;
     },
-    methods: { action: linkTo("Button", "with some emoji") }
+    methods: { action: linkTo("VButton", "with some emoji") }
   }))
   .add("with some emoji", () => ({
     components: { MyButton },
