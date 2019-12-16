@@ -4,11 +4,12 @@ InlineLoader
 DataLoading
 Tooltip
 Toaster
+NEW => Animator DONE
 
 ## Tables & Data
+DataTable - DONE - need enhancements
 QuickList
 Tag
-DataTable
 RemovableTag
 ColourKey
 GridData
@@ -16,7 +17,7 @@ ListData
 
 ## Layout
 Header => SiteHeader DONE
-NEW => SiteLogo DONE
+NEW => SiteHeaderLogo DONE
 NEW => SiteToolBar DONE
 NEW => SiteToolBarNav DONE
 NEW => SiteWrapper DONE
@@ -24,19 +25,28 @@ AttachedHeaderBlock => PageSubHeader
 KeyValue => PageHeaderItem
 NEW => PageHeader DONE
 NEW => PageWrapper DONE
-OffCanvas
+OffCanvas - DONE - need enhancements
 Section
 
 ## Navigation & Actions
 Breadcrumbs - DONE - need enhancements
-ContextualMenu => DropdownMenu DONE - need enhancements
-Pagination
-PaginationWrapper
+NEW => DropdownMenu DONE - need enhancements
+ContextualMenu => ActionMenu DONE - need enhancements
+NEW => IconButton DONE
+NEW => VButton DONE
+NEW => VCard DONE
+NEW => VHeading
+NEW => VLink DONE
+NEW => VPill DONE
+TabContainer => VTabs DONE
+Tab => VTabsItem DONE
+NEW => VTag DONE
+
 NEW => Modal
 Confirmation => ModalConfirm
+Pagination
+PaginationWrapper
 LogOutConfirmation => ModalLogout
-TabContainer => Tabs
-Tab => VTabs DONE
 AppSettings
 
 ## Forms

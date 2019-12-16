@@ -3,7 +3,6 @@
 </template>
 
 <script>
-// import FormInput from "@/components/forms/FormInput";
 export default {
   name: "App"
 };

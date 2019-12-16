@@ -1,15 +1,13 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import { storiesOf } from "@storybook/vue";
-import SiteToolbar from "@/components/layout/SiteToolbar.vue";
-import SiteHeader from "@/components/layout/SiteHeader.vue";
-import SiteToolbarNav from "@/components/layout/SiteToolbarNav.vue";
-import PageWrapper from "@/components/layout/PageWrapper";
-import PageHeader from "@/components/layout/PageHeader";
-import PageSubHeader from "@/components/layout/PageSubHeader";
-import Breadcrumbs from "@/components/nav/Breadcrumbs";
-import DropdownMenu from "@/components/nav/DropdownMenu";
-import VButton from "@/components/VButton";
-import VIcon from "@/components/VIcon";
+import { SiteToolbar, SiteToolbarNav } from "@/components/layout/SiteToolbar";
+import { SiteHeader } from "@/components/layout/SiteHeader";
+import { PageWrapper } from "@/components/layout/PageWrapper";
+import { PageHeader, PageSubHeader } from "@/components/layout/PageHeader";
+import { Breadcrumbs } from "@/components/nav/Breadcrumbs";
+import { DropdownMenu } from "@/components/nav/DropdownMenu";
+import { VButton } from "@/components/VButton";
+import { VIcon } from "@/components/VIcon";
 
 storiesOf("Layouts", module).add("Variations", () => ({
   data() {
@@ -42,7 +40,7 @@ storiesOf("Layouts", module).add("Variations", () => ({
       <SiteToolbar>
         <SiteToolbarNav />
       </SiteToolbar>
-      <SiteHeader v-slot="" />
+      <SiteHeader />
       <Breadcrumbs :items="breadcrumb" />
       <PageHeader>
         Page header
