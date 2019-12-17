@@ -2,7 +2,7 @@ import {
   START_USER_ACTIVITY,
   SYSTEM_LOGOUT
 } from "wfp-vue-shared-components/src/libs/auth-utils";
-import { ENV_CONFIG } from "~/config/env-utils";
+import { ENV_CONFIG } from "./env-utils";
 
 export const setAxiosConfig = ({ env, $axios }) => {
   $axios.interceptors.response.use(
