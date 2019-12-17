@@ -18,6 +18,7 @@
   "main": "./dist/wfp-vue-shared-components.umd.min.js",
   "files": [
     "dist/**/*",
+    "src/libs/**/*",
     "src/assets/**/*"
   ],
   "dependencies": {
