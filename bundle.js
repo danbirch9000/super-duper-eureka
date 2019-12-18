@@ -12,7 +12,7 @@ import { Animator } from "./src/components/Animator";
 import { DataTable } from "./src/components/DataTable";
 import { IconButton } from "./src/components/IconButton";
 import { OffCanvas } from "./src/components/OffCanvas";
-import { VButton } from "./src/components/VTag";
+import { VButton } from "./src/components/VButton";
 import { VCard } from "./src/components/VCard";
 import { VHeading } from "./src/components/VHeading";
 import { VIcon } from "./src/components/VIcon";
